@@ -1,8 +1,4 @@
-body {
-  padding: 50px;
-  font: "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 150%;
-}
+
 
 a {
   color: #00B7FF;
@@ -15,4 +11,101 @@ a {
 
 #logoutLink{
   margin-right : 80px;
+}
+
+@font-face {
+    font-family: 'Julius Sans One', sans-serif;
+    src: url(JuliusSansOne-Regular.ttf);
+}
+
+body {
+	padding-top: 0%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	font-family: 'Lobster', cursive;
+	text-align: center;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 40px;
+}
+
+th {
+	margin: 0;
+	padding: 0;
+}
+
+td {
+	text-align: center;
+	vertical-align: top;
+	padding-top: 1%;
+	font-size: 80%;
+	width: 25%;
+}
+
+img {
+	width: 250px;
+	height: 250px;
+	border-radius: 25px;
+}
+
+table {
+	width: 100%;
+	padding-top: 0%;
+	margin-top: 0%;
+	padding-left: 4%;
+	padding-right: 4%;
+	table-layout: fixed;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
